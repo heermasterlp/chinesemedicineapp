@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#contentdiv{
+    width: 1200px;
+    height: 1200px;
+    background-color: black;
+}
+
+canvas{
+    width: 600px;
+    height: 800px;
+}
