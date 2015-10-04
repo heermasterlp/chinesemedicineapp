@@ -1,19 +1,129 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+            body {
+              padding: 50px;
+              font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+              
+            }
+
+            a {
+              color: #00B7FF;
+            }
+
+            #contentdiv{
+                width: 1200px;
+                height: 700px;
+                background-color:beige;
+                float: left;
+            }
+            
+            #settingdiv {
+                float: right;
+            }
+
+            canvas{
+                
+                width: 1180px;
+                height: 680px;
+                background-color: chocolate;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+h1 {
+    font-size: 100%;
+    font: inherit;
 }
 
-a {
-  color: #00B7FF;
+a:hover,
+a:focus {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
 }
 
-#contentdiv{
-    width: 1200px;
-    height: 1200px;
-    background-color: black;
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
 }
 
-canvas{
-    width: 600px;
-    height: 800px;
+.impress-enabled .step.active { opacity: 1 }
+
+
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.slide {
+    display: block;
+
+    width: 900px;
+    height: 700px;
+    padding: 40px 60px;
+
+    background-color: white;
+/*    border: 1px solid rgba(0, 0, 0, .3);*/
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+    color: rgb(102, 102, 102);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+.slide q {
+    display: block;
+    font-size: 50px;
+    line-height: 72px;
+
+    margin-top: 100px;
+}
+
+.slide q strong {
+    white-space: nowrap;
+}
+
+.thoughts {
+    font-size: 90px;
+    line-height: 150px;
+}
+.footnote {
+    font-size: 32px;
+}
+
+
+/*
+    The last step is an overview.
+    There is no content in it, so we make sure it's not visible because we want
+    to be able to click on other steps.
+
+*/
+#overview { display: none }
+
+/*
+    We also make other steps visible and give them a pointer cursor using the
+    `impress-on-` class.
+*/
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
 }
